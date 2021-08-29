@@ -33,9 +33,9 @@ Task.propTypes= {
 const btnDelete = {
     fontSize: '18px',
     background: '#ea2027',
-    color: '#fff',
+    color: 'fff',
     border: 'none',
-    padding: '10px 15px',
+    padding: '12px 16px',
     borderRadius: '50%',
     cursor: 'pointer',
     float: 'right'

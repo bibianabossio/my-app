@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route } from 'react- router-dom'
-import './App.css';
+import {BrowserRouter as Router, Route, Link } from 'react-router-dom'
+//import './App.css';
 
 import tasks from './sample/tasks.json';
 //components
@@ -39,8 +39,11 @@ class App extends Component {
   
   render () {
     return <div>
-     <Router>
-        <Route path="/" render={() => {
+      <Router>
+        <Link to= "/">Servidor de Merce</Link>
+        <br/>
+        <Link to= "/posts">Servidor de Guada</Link>
+        <Route exact path="/" render={() => {
            return  <div>
               <TaskForm addTask= {this.addTask}/>
               <Tasks 
@@ -52,9 +55,9 @@ class App extends Component {
       }} >
       </Route>
       <Route path="/posts" component={Posts}/>
-      </Router>
+      </Router> 
     
-        <Posts/>
+       
       </div>
   }
 }

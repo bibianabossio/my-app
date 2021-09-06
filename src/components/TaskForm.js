@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+//import './TaskForm.css';
 
 export default class TaskForm extends Component{
     state ={
@@ -18,26 +19,42 @@ onChange = e => {
 
 render(){
     return (
+        <div class= "letra">
+            <h2>Iniciar Sesión</h2>
         <form onSubmit={this.onSubmit}>
+        <label htmlFor="new-todo">
+        
+            Usuario: 
+            <br/> 
+          </label>
             <input
                  type="text" 
                  name= "title"
-                 placeholder="Write a Task" 
+                 placeholder="" 
                  onChange={this.onChange} 
                  value={this.state.title}/>
             <br />
             <br />
-            <textarea 
+            <br />
+            <label htmlFor="new-todo">
+            Contraseña: 
+            <br/> 
+          </label>
+            <input
                 name= "description"
-                placeholder= "Write a Description" 
+                placeholder= "" 
                 onChange={this.onChange} 
-                value={this.state.description}>
-                </textarea>
+                value={this.state.description}/>
             <br/> 
             <br/> 
-            <input type="submit"/>
+            <div class= "alinearBoton">
+                  <button class= "button ">Ingresar</button>
+                  <button class= "button ">Recuperar Contraseña</button>
+            </div>
+
             <br/> 
         </form>
+        </div>
     )
 }
 }
